@@ -1,0 +1,442 @@
+GameInfo
+{
+	TitlePage = "winerpic"
+	CreditPage = "winerpic"
+	TitleMusic = "HQ_TITLE"
+	IntermissionMusic = "HQ_INTER"
+}
+
+ClearEpisodes
+Episode HQ1
+{
+	Name = "DPT HQ"
+	Key = "1"
+}
+
+Episode MAP01
+{
+	Name = "MAP01 START"
+	Key = "2"
+}
+
+clearskills
+Skill Baby
+{
+	TextColor = White
+	AutoUseHealth
+	AmmoFactor = 2
+	DamageFactor = 0.5
+	EasyBossBrain
+	SpawnFilter = Baby
+	Name = "Novice"
+	Key = "1"
+}
+
+Skill Easy
+{
+	TextColor = Green
+	EasyBossBrain
+	SpawnFilter = Easy
+	Name = "Apprentice"
+	Key = "2"
+}
+
+Skill Normal
+{
+	TextColor = Yellow
+	SpawnFilter = Normal
+	Name = "Adept"
+	Key = "3"
+}
+
+Skill Hard
+{
+	TextColor = Red
+	SpawnFilter = Hard
+	Name = "Expert"
+	Key = "4"
+}
+
+Skill Nightmare
+{
+	TextColor = Darkred
+	AmmoFactor = 2
+	FastMonsters
+	DisableCheats
+	RespawnTime = 12
+	SpawnFilter = Nightmare
+	Name = "Master"
+	MustConfirm = "I am your master! Agree?"
+	Key = "5"
+}
+
+Skill HellInYourComputer
+{
+	TextColor = Black
+	ACSReturn = 5
+	AmmoFactor = 2
+	FastMonsters
+	Name = "Hell"
+	DisableCheats
+	DamageFactor = 1.5
+	SpawnFilter = Nightmare
+	MustConfirm = "Hell rushes to your computer! Do you really want?"
+	ReplaceActor = "Medikit", "Stimpack"
+	ReplaceActor = "MegaSphere", "SoulSphere"
+	ReplaceActor = "HellKnight", "BaronOfHell"
+	ReplaceActor = "ZombieMan", "ShotgunGuy"
+	ReplaceActor = "ShotgunGuy", "ChaingunGuy"
+	ReplaceActor = "Demon", "Spectre"
+	ReplaceActor = "DoomImpBall", "CacodemonBall"
+	ReplaceActor = "CacodemonBall", "FatShot"
+	ReplaceActor = "FatShot", "Rocket"
+	//ReplaceActor = "Rocket", "BFGBall" // Removed because this breaks a compatibility in walkthrough.
+	ReplaceActor = "ArachnotronPlasma", "PlasmaBall"
+	ReplaceActor = "DPTHQ_ExplosiveBarrel", "NuclearBarrel"
+	Key = "6"
+}
+
+Skill Survival
+{
+	ACSReturn = 6
+	TextColor = Blue
+	SpawnFilter = Hard
+	Name = "Survival"
+	DisableCheats
+	MustConfirm = "This type of game is designed for survival. In it you can not save the game and load. Also it works only in GZDoom."
+	Key = "7"
+}
+
+Skill Dante
+{
+	DamageFactor = 255
+	MonsterHealth = 0.000001
+	SpawnFilter = Nightmare
+	Name = "Instagib"
+	TextColor = Blue
+	mustconfirm = "One Hit. One Kill. Doesn't work in Zandronum, works only in GZDoom!"
+	Key = "8"
+}
+
+Skill Arcade
+{
+	TextColor = White
+	AutoUseHealth
+	AmmoFactor = 2
+	DamageFactor = 0.25
+	EasyBossBrain
+	SpawnFilter = Baby
+	Name = "Arcade"
+	ReplaceActor = "Stimpack", "Medikit"
+	ReplaceActor = "Medikit", "SoulSphere"
+	ReplaceActor = "SoulSphere", "MegaSphere"
+	ReplaceActor = "BaronOfHell", "HellKnight"
+	ReplaceActor = "Anomalyies", "ShotgunGuy"
+	ReplaceActor = "ShotgunGuy", "ZombieMan"
+	ReplaceActor = "Demon", "ChaingunGuy"
+	ReplaceActor = "CacodemonBall", "DoomImpBall"
+	ReplaceActor = "FatShot", "CacodemonBall"
+	//ReplaceActor = "Rocket", "ArachnotronPlasma"
+	MustConfirm = "Arcade mode."
+	Key = "9"
+}
+
+DefaultMap
+{
+	allowrespawn
+}
+
+Map TITLEMAP "TITLE"
+{
+	SecretNext = "CREDMAP"
+	Next = "CREDMAP"
+	Music = "NOMUS"
+}
+
+Map CREDMAP "CREDITS"
+{
+	SecretNext = "TITLEMAP"
+	Next = "TITLEMAP"
+	Music = "HQ_INTRO"
+}
+//HQ
+Map HQ1 "DPT CITY"
+{
+	Music = "MAP01"
+	SKY1 = "SKY1"
+	Next = "HQ1"
+}
+
+Episode HQARENA
+{
+	Name = "Arena"
+	Key = "3"
+}
+
+Episode HQPIANO
+{
+	Name = "Piano"
+	Key = "4"
+}
+
+Episode HQSNDBX1
+{
+	Name = "Sandbox Maps"
+	Key = "5"
+}
+
+Episode COOP1
+{
+	Name = "Cooperative Maps"
+	Key = "6"
+}
+
+Episode HQ_2KC1
+{
+	Name = "Deathmatch Maps"
+	Key = "7"
+}
+
+Episode HQCTF1
+{
+	Name = "CTF Maps"
+	Key = "8"
+}
+
+Map HQARENA "Arena"
+{
+	SKY1 = "SKY1"
+	Next = "HQPIANO"
+	Music = "HQ2"
+}
+
+Map HQPIANO "Piano"
+{
+	SKY1 = "SKY1"
+	Next = "HQSNDBX1"
+	Music = "NOMUS"
+}
+
+Map HQSNDBX1 "gm_flatgrass"
+{
+	SKY1 = "SKY1"
+	Next = "HQSNDBX3" // WORKER
+	Music = "NOMUS"
+}
+
+Map HQSNDBX2 "gm_construct" // WIP
+{
+	SKY1 = "SKY1"
+	Next = "HQSNDBX3"
+	Music = "NOMUS"
+}
+
+Map HQSNDBX3 "Green Screen"
+{
+	SKY1 = "SKY1"
+	Next = "HQSNDBX4"
+	Music = "NOMUS"
+}
+
+Map HQSNDBX4 "Randomly Colorful Map"
+{
+	SKY1 = "SKY1"
+	Next = "HQARENA"
+	Music = "DASMODEL" // D_RAIN
+}
+
+Map COOP1 "Zirconium Generation Plant"
+{
+	SKY1 = "SKY1"
+	Next = "COOP2"
+	Music = "D_KILWIL"
+}
+
+Map COOP2 "Marine Base #197-003"
+{
+	SKY1 = "SKY1"
+	Next = "COOP3"
+	Music = "D_MUS3"
+}
+
+Map COOP3 "Somebody Once Told Me"
+{
+	SKY1 = "SKY1"
+	Next = "COOP4"
+	Music = "D_INFINI"
+}
+
+Map COOP4 "Enterway"
+{
+	SKY1 = "SKY1"
+	Next = "COOP5"
+	Music = "d_vrack"
+}
+
+Map COOP5 "In a Trap"
+{
+	SKY1 = "SKY1"
+	Next = "GENCOOP1" // COOP6 Currently disabled.
+	Music = "MUS01"
+}
+
+Map COOP6 "Exitway" // Terry Trap? -_-...
+{
+	SKY1 = "SKY1"
+	Next = "GENCOOP1"
+	Music = "Music08"
+}
+
+Map GENCOOP1 "SLIGE"
+{
+	SKY1 = "SKY1"
+	Next = "GENCOOP2"
+	Music = "D_SKELET"
+}
+
+Map GENCOOP2 "OBLIGE 0.81"
+{
+	SKY1 = "SKY1"
+	Next = "GENCOOP3"
+	Music = "D_ADRIAN"
+}
+
+Map GENCOOP3 "OBLIGE 0.85"
+{
+	SKY1 = "SKY1"
+	Next = "GENCOOP4"
+	Music = "d_stat12"
+}
+
+Map GENCOOP4 "OBLIGE 3.57" // The Monumental Cathedral
+{
+	SKY1 = "SKY1"
+	Next = "GENCOOP5"
+	Music = "D_DEAD"
+}
+
+Map GENCOOP5 "OBLIGE 4.28" // Occult Cooling Factory
+{
+	SKY1 = "SKY1"
+	Next = "GENCOOP6"
+	Music = "d_sausag"
+}
+
+Map GENCOOP6 "OBLIGE 6.20" // Inactive Platform
+{
+	SKY1 = "SKY1"
+	Next = "GENCOOP7"
+	Music = "d_pain"
+}
+
+Map GENCOOP7 "OBLIGE 7.50" // Enter the Parallax Tower
+{
+	SKY1 = "SKY1"
+	Next = "GENCOOP8"
+	Music = "D_JP_AST"
+}
+
+Map GENCOOP8 "OBLIGE 7.55" // Overtime
+{
+	SKY1 = "SKY1"
+	Next = "COOP1" // GENCOOP9
+	Music = "D_LOST"
+}
+
+Map HQ_2KC1 "$2000$ Classic v1"
+{
+	SKY1 = "SKY1"
+	Next = "HQ_2KC2"
+	Music = "NOMUS"
+}
+
+Map HQ_2KC2 "$2000$ Classic v2"
+{
+	SKY1 = "SKY1"
+	Next = "HQ_2KM"
+	Music = "NOMUS"
+}
+
+Map HQ_2KM "$2000$ Modern"
+{
+	SKY1 = "SKY1"
+	Next = "HQDM1"
+	Music = "NOMUS"
+}
+
+Map HQDM1 "SSG Impressive"
+{
+	SKY1 = "SKY1"
+	Next = "HQDM2"
+	Music = "D_BEAST"
+}
+
+Map HQDM2 "Big Outsider"
+{
+	SKY1 = "SKY1"
+	Next = "HQDM3"
+	Music = "D_VRACK"
+}
+
+Map HQDM3 "Somebases"
+{
+	SKY1 = "SKY1"
+	Next = "HQDM4"
+	Music = "D_VOLCAN"
+}
+
+Map HQDM4 "Dwanged E1M1"
+{
+	SKY1 = "SKY1"
+	Next = "HQDM5"
+	Music = "D_TRAIN"
+}
+
+Map HQDM5 "Long Tick"
+{
+	SKY1 = "SKY1"
+	Next = "HQDM6"
+	Music = "D_THEF"
+}
+
+Map HQDM6 "Metal Banana"
+{
+	SKY1 = "SKY1"
+	Next = "HQDM7"
+	Music = "D_STELTH"
+}
+
+Map HQDM7 "Sead Dimple"
+{
+	SKY1 = "SKY1"
+	Next = "HQDM8"
+	Music = "D_SIGMA"
+}
+
+Map HQDM8 "Jasper07"
+{
+	SKY1 = "SKY1"
+	Next = "HQDM9"
+	Music = "D_JASPER"
+}
+
+Map HQDM9 "Polaris01"
+{
+	SKY1 = "SKY1"
+	Next = "HQCTF1"
+	Music = "D_PWRMIL"
+}
+
+Map HQCTF1 "de_aztec"
+{
+	SKY1 = "SKY1"
+	Next = "HQCTF2"
+	Music = "HALO"
+}
+
+Map HQCTF2 "de_dust2x2"
+{
+	SKY1 = "SKY1"
+	Next = "HQCTF1"
+	Music = "ORIONERO"
+}
