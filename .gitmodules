@@ -1,6 +1,8 @@
 [submodule "Music"]
 	path = Music
 	url = https://github.com/dpteam/dpt-hq-music
+	branch = experimental
 [submodule "Maps"]
 	path = Maps
 	url = https://github.com/dpteam/dpt-hq-maps
+	branch = experimental
