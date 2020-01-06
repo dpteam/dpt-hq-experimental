@@ -4,6 +4,15 @@ GameInfo
 	CreditPage = "winerpic"
 	TitleMusic = "HQ_TITLE"
 	IntermissionMusic = "HQ_INTER"
+	PlayerClasses = "Guest", "RebelClass", "Armyman", "Pocik",
+		"Cop", "Mingebag", "Mage", "Healer", "ImbaPers", "CalebClass",
+		"Troll", "Ya_Zhe_MaTb", "Brutal_Player", "DartPower", "Ronikari",
+		"NickBock", "VadimClass", "Ovlab", "Coolgirl", "NighMare", "Velaron",
+		"Benellus", "Zero775", "Oppressor1338", "Zendos", "CorpseSatan", "OVA",
+		"IDHLEB", "LXandro", "4el", "VodkaClass", "DogClass", "ZombieManClass",
+		"ShotgunGuyClass", "ChainGunGuyClass", "DooMImpClass", "DemonClass",
+		"SpectreClass", "LostSoulClass", "CacodemonClass", "PainElementalClass",
+		"RevenantClass"
 }
 
 ClearEpisodes
